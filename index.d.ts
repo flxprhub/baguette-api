@@ -28,10 +28,4 @@ export class Baguette {
      * @param {Number} amount
      */
     sendPayment(link: string, amount: number): void;
-
-    /**
-     * 
-     * @param text Айди пользователя
-     */
-    getStickers(text: string): void;
 }
