@@ -1,10 +1,12 @@
-const axios = require('axios');
-const chalk = require('chalk');
+import axios from "axios";
+import chalk from "chalk";
 
 class API {
+    userData: string;
+    userId: number;
     /**
      * @param {String} userData 
-     * @param {String} userId 
+     * @param {Number} userId 
      */
     constructor(userData, userId) {
         this.userData = userData;
@@ -124,7 +126,10 @@ class API {
 
 
 
-module.exports = class Baguette {
+export class Baguette {
+    userData: string;
+    userId: number;
+    api: API;
     /**
      * @param {Object} options - Опции класса
      * 
