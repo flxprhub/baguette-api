@@ -12,7 +12,7 @@ class API {
     }
 
 
-    // Мой топ
+    // Клик
     async click() {
         await axios.post("https://baguette-game.com:3030/NewClick", {
             data: {
@@ -36,7 +36,7 @@ class API {
         });
     }
 
-    // Получить баланс
+    // Получить баланс пользователя
     async getBalance(id) {
         if (!id) {
             throw (`${chalk.red(`Baguette Coin error:`)} не указан параметр id`)
@@ -88,7 +88,7 @@ class API {
 
     // Отправить коины пользователю
     async sendPayment(link, amount) {
-        if (!id) {
+        if (!link) {
             throw (`${chalk.red(`Baguette Coin error:`)} не указан параметр id`)
         }
         if (!amount) {

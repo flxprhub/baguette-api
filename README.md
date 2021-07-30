@@ -74,10 +74,10 @@ run().catch(console.error);
 
 
 ### sendPayment
-Получить баланс любого пользователя/пользователей
+Перевод коинов по ссылке пользователя
 ```js
 async function run() {
-    const result = await client.api.sendPayment(id, amount);
+    const result = await client.api.sendPayment(link, amount);
     console.log(result);
 }
 
@@ -87,5 +87,5 @@ run().catch(console.error);
 
 |Параметр|Тип|Описание|
 |-|-|-|
-|id|Number|Айди пользователя, которому нужно отправить коины|
+|link|Number|Ссылка на страницу пользователя, которому нужно отправить коины (ссылка в формате https://vk.com/filatovpr)|
 |amount|Number|Сумма, которую нужно отправить пользователю|
