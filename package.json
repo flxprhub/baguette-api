@@ -1,0 +1,21 @@
+{
+  "name": "baguette-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "filatovpr",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filatovpr/baguette-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/filatovpr/baguette-api/issues"
+  },
+  "homepage": "https://github.com/filatovpr/baguette-api#readme",
+  "description": ""
+}
