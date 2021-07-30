@@ -1,7 +1,8 @@
 {
   "name": "baguette-api",
   "version": "1.0.0-rc.2",
-  "main": "./src/index.js",
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": "filatovpr",
   "license": "ISC",
   "dependencies": {
