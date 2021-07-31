@@ -14,19 +14,12 @@ class API {
 
     // Клик
     async click() {
-        await axios.post("https://baguette-game.com:3030/NewClick", {
+        const request = await axios({
+            method: 'post',
+            url: 'https://baguette-game.com:3030/NewClick',
             data: {
                 "id": this.userId,
                 "pr": this.userData,
-            },
-        }).then((response) => {
-            if (!response.data.bal) {
-                throw {
-                    status: 'error',
-                    description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
-                }
-            } else {
-                return response.data
             }
         }).catch(() => {
             throw {
@@ -34,6 +27,8 @@ class API {
                 description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
             }
         });
+
+        return request.data;
     }
 
     // Получить баланс пользователя
@@ -42,18 +37,11 @@ class API {
             throw (`${chalk.red(`Baguette Coin error:`)} не указан параметр id`)
         }
 
-        await axios.post("https://baguette-game.com:3030/GetUserBalance", {
+        const request = await axios({
+            method: 'post',
+            url: 'https://baguette-game.com:3030/GetUserBalance',
             data: {
                 "id": id,
-            },
-        }).then((response) => {
-            if (response.data.bal) {
-                throw {
-                    status: 'error',
-                    description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
-                }
-            } else {
-                return response.data
             }
         }).catch(() => {
             throw {
@@ -61,22 +49,17 @@ class API {
                 description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
             }
         });
+
+        return request.data;
     }
 
     // Получение моего баланса
     async getMyBalance() {
-        await axios.post("https://baguette-game.com:3030/GetUserBalance", {
+        const request = await axios({
+            method: 'post',
+            url: 'https://baguette-game.com:3030/GetUserBalance',
             data: {
                 "id": this.userId,
-            },
-        }).then((response) => {
-            if (response.data.bal) {
-                throw {
-                    status: 'error',
-                    description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
-                }
-            } else {
-                return response.data
             }
         }).catch(() => {
             throw {
@@ -84,6 +67,8 @@ class API {
                 description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
             }
         });
+
+        return request.data;
     }
 
     // Отправить коины пользователю
@@ -95,21 +80,14 @@ class API {
             throw (`${chalk.red(`Baguette Coin error:`)} не указан параметр amount`)
         }
         
-        await axios.post("https://baguette-game.com:3030/Transfer", {
+        const request = await axios({
+            method: 'post',
+            url: 'https://baguette-game.com:3030/Transfer',
             data: {
                 "Amount": amount,
                 "LinkVkUser": link,
                 "id": this.userId,
                 "params": this.userData,
-            },
-        }).then((response) => {
-            if (!response.data.bal && response.data.status != "Перевод был успешно совершен") {
-                throw {
-                    status: 'error',
-                    description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
-                }
-            } else {
-                return response.data
             }
         }).catch(() => {
             throw {
@@ -117,6 +95,8 @@ class API {
                 description: 'Ошибка авторизации клиента. Проверьте авторизационные данные'
             }
         });
+
+        return request.data;
     }
 }
 
