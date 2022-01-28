@@ -1,0 +1,25 @@
+{
+  "name": "baguette-api",
+  "version": "3.0.0-rc.2",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "author": {
+    "name": "Vadim Filatov",
+    "url": "https://t.me/flxprhub"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flxprhub/baguette-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flxprhub/baguette-api/issues"
+  },
+  "homepage": "https://github.com/flxprhub/baguette-api#readme",
+  "description": ""
+}

@@ -1,0 +1,11 @@
+node_modules
+.gitignore
+package-lock.json
+src/typescript
+src/typescript/*
+examples
+examples/*
+examples/js
+examples/ts
+examples/js/*
+examples/ts/*
