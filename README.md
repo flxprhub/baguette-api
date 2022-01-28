@@ -1,4 +1,4 @@
-<div align='center'><h1>baguette-api (<strong>❗ PROJECT SUSPENTED</strong>)</h1></div>
+<div align='center'><h1>baguette-api (<bold>❗ PROJECT SUSPENTED</bold>)</h1></div>
 <div align='center'>Простой модуль для работы с API сервиса Baguette Coin</div>
 
 <div align='center'>
